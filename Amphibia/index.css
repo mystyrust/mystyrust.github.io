@@ -1,0 +1,3515 @@
+#workskin {
+    overflow: hidden;
+}
+
+/* .userstuff p, .userstuff details {
+  margin: 1.286em auto;
+  padding: 0;
+} */
+
+/* 
+#workskin details {
+  margin: 0px;
+} */
+
+.chart-img {
+    display: block;
+    margin: 0px auto;
+    max-width: 500px;
+}
+
+/* ------------------------------------------------------------------------------------------  */
+/* la temperanza texting https://archiveofourown.org/works/6434845/chapters/14729722 */
+.phone {
+  max-width: 300px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: table;
+  margin: auto;
+  font-size: 16px;
+}
+
+.grouptext-info {
+    color: red;
+    font-size: 12px;
+    float: right;
+    clear: both;
+    margin-top: -9px;
+}
+
+.not-sent {
+    left: -25px;
+  }
+  
+.not-sent::before {
+  content: url(https://i.imgur.com/HYHA5Sz.png);
+  position: absolute;
+  right: -27px;
+  cursor: pointer;
+}
+
+.not-sent-cont {
+    float: right;
+    clear: both;
+}
+
+.not-sent-cont .breply {
+    left: -25px;
+}
+
+.not-sent-pic {
+    position: absolute;
+    right: -4px;
+    cursor: pointer;
+    top: 7px;
+}
+
+.not-sent-cont details.outer-menu, 
+.not-sent-cont .outer-menu summary {
+    position: relative;
+}
+
+.outer-menu:not([open]) .inner-menu
+{
+    display: none;
+}
+
+.outer-menu[open] .inner-menu
+{
+    display: flex;
+    padding: 10px;
+    position: absolute;
+    background: white;
+    right: -3px;
+    border: 1px lightgray solid;
+    top: 35px;
+    z-index: 10;
+}
+
+.outer-menu[open] .inner-menu:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+/* if we allow the resent message to "work" */
+.not-sent-cont:has(.send-true.inner-menu[open]) .grouptext-info,
+.not-sent-cont:has(.send-true.inner-menu[open]) .outer-menu
+{
+    display: none;
+}
+
+.not-sent-cont:has(.send-true.inner-menu[open]) .breply
+{
+    left: 0px;
+}
+
+/* if we do NOT allow the resent message to "work" */
+.not-sent-cont:has(.send-false.inner-menu[open]) .resend-response,
+.not-sent-cont:has(.send-false.inner-menu:not([open])) .resend-prompt
+{
+    display: inline-block;
+}
+
+.not-sent-cont:has(.send-false.inner-menu:not([open])) .resend-response,
+.not-sent-cont:has(.send-false.inner-menu[open]) .resend-prompt
+{
+    display: none;
+}
+
+p.header {
+    margin-bottom: 20px;
+}
+  
+.header {
+  min-width: 300px;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #b2b2b2;
+  color: #000000;
+  font-weight: bold;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  margin-left: -.5em;
+  margin-right: -.5em;
+  margin-bottom: -2em;
+  text-align: center;
+  text-transform: capitalize;
+  display: table;
+}
+
+.messagebody {
+    /* background-color: #FFFFFF; */
+    display: table;
+    padding-left: .5em;
+    padding-right: .5em;
+  }
+
+  .text {
+  float: left;
+  color: black;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #e5e5ea;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.text::after {
+  content: "";
+  position: absolute;
+  left: -.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-right: 0.5em solid #e5e5ea;
+  border-bottom-right-radius: 1em 0.5em;
+}
+
+.breply {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #1289fe;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.breply::after {
+  content: "";
+  position: absolute;
+  right: -0.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-left: 0.5em solid #1289fe;
+  border-bottom-left-radius: 1em 0.5em;
+}
+
+.texttime {
+  min-width: 295px;
+  /* color: #7B7C80; */
+  opacity: 0.5;
+  font-size: .75em;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  margin-left: -.5em;
+  margin-right: -.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  display: table;
+}
+
+.texttime img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: inline-flex;
+  margin-bottom: -5px;
+}
+
+.grouptext {
+  color: #7B7C80;
+  font-size: .75em;
+  padding-bottom: .5em;
+  padding-top: 0;
+  margin-left: .5em;
+  margin-bottom: -2.5em;
+  text-align: left;
+  display: table;
+  clear: both;
+}
+
+.readreceipt {
+  /* color: #7B7C80; */
+  opacity: 0.5;
+  font-size: .75em;
+  float: right;
+  position: relative;
+  clear: both;
+  margin: -.75em -1.25em 0.5em 0;
+  padding: 0 1em 0.5em;
+}
+  
+
+/* ------------------------------------------------------------------------------------------  */
+/* la temperanza letter document https://archiveofourown.org/works/11549178/chapters/25935135 */
+
+.letter {
+  /* background: #fff;
+  color: #000; */
+  padding: 15px;
+  position: relative;
+  /* width: 65%; */
+  max-width: 700px;
+  margin: 0 auto 25px;
+  display: block;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.indent {
+    padding-left: 10px;
+}
+
+.large-text {
+    font-size: 20px;
+}
+
+.whitebox {
+    font-family: sans-serif;
+    background: #fff;
+    color: #000;
+    padding: 15px;
+    max-width: 500px;
+    margin: 0 auto 25px;
+    display: block;
+    box-shadow: 0 0px 1px grey, 0 0px 1px grey;
+}
+
+.bottom-rip {
+    height: 41px;
+    width: 530px;
+    display: block;
+    margin: 0 auto;
+    margin-top: -25px;
+    padding-right: 0px;
+}
+
+.top-rip {
+    height: 41px;
+    width: 530px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -20px;
+    padding-right: 0px;
+}
+
+/* .fade-tobottom {
+    background: linear-gradient(to bottom, currentColor, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+/* .fade-totop {
+    background: linear-gradient(to top, currentColor, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+.fadeout2 {
+  position: relative;
+}
+
+.fadeout2::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(255,255,255, 0), white);
+}
+
+.fadeout {
+    position: relative;
+  }
+  
+.fadeout::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(255,255,255, 0), white);
+}
+
+
+.fadeout::after {
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(to top, rgba(255,255,255, 0), white);
+  }
+  
+/* ------------------------------------------------------------------------------------------  */
+/* La_Temperanza email  https://archiveofourown.org/works/7953412 */
+.ewindow {
+    text-align: justify;
+    margin: 0 auto 40px auto;
+    max-width: 600px;
+    min-width: 300px;
+  }
+
+  .attach {
+    /* background-color: #fff; */
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0.25em;
+    padding: 0.25em;
+    cursor: pointer;
+    display: inline-table;
+  }
+
+  .attach:hover {
+    background: lightblue;
+  }
+
+  .attach::before {
+    content: '\1F4CE';
+  }
+
+  .attach u {
+    padding-left: 5px;
+  }
+  
+   .topbar {
+    background-color: #404040;
+    color: #FFFFFF;
+    /* border-color: #404040; */
+    border-style: solid;
+    cursor: pointer;
+    /* width: 66%; */
+    padding: 2px;
+  height: 1.5em;
+  /* overflow: hidden; */
+    /* text-overflow: clip; */
+    margin: 0 auto;
+  }
+  
+   .topbar:before {
+    content: 'Email';
+    display: inline-block;
+    position: relative;
+    float: left;
+    font-weight: bold;
+    padding: 0 3px;
+    width: 85%;
+  }
+  
+   .topbar:after {
+    content: ' _ X';
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    padding-right: 5px;
+    float: right;
+    color: #cfcfcf;
+    -webkit-transform: scale(1.5, 1.0);
+    -moz-transform: scale(1.5, 1.0);
+    -ms-transform: scale(1.5, 1.0);
+    -o-transform: scale(1.5, 1.0);
+    transform: scale(1.5,1.0);
+    cursor: pointer;
+  }
+  
+   .textfield {
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    /* margin-top: 0;
+    margin-bottom: 0; */
+    /* width: 66%; */
+    padding: 2px 2px 2px 10px;
+    /* color: #000000;
+    background-color: #FFFFFF; */
+    /* text-overflow: clip; */
+    margin: 0 auto;
+
+
+  }
+  
+   .ebody {
+    /* width: 66%; */
+    padding: 10px;
+    text-align: justify;
+    /* color: #000000;
+    background-color: #FFFFFF; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* overflow: auto; */
+    display: block;
+    /* min-height: 250px; */
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 auto;
+  }
+  
+   .ebody::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  
+   .ebody::-webkit-scrollbar:vertical {
+    width: 12px;
+  }
+  
+   .ebody::-webkit-scrollbar:horizontal {
+    height: 12px;
+  }
+  
+   .ebody::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+  }
+  
+   .ebody::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+  
+   .buttonbar {
+    border-color: #cfcfcf;
+    background-color: #f5f5f5;
+    color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    border-top: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* width: 66%; */
+    padding: 2px;
+  height: 1.5em;
+  /* overflow: hidden; */
+    text-overflow: clip;
+    margin: 0 auto;
+
+  }
+  
+   .buttonbar:after {
+    content: 'Reply | Forward | Delete';
+    display: inline-block;
+    position: relative;
+    float: left;
+    padding: 0 3px;
+    cursor: pointer;
+  }
+
+/* ------------------------------------------------------------------------------------------  */
+/* La_temperanza sticky notes  https://archiveofourown.org/works/4390949 */
+
+.sticky {
+    display: block;
+    background-color: #ffff99;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+  }
+  
+  .sticky2 {
+    display: block;
+    background-color: #FF99CC;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Arial", serif;
+    text-align: left;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    -webkit-transform: rotate(6deg);
+    -o-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    transform: rotate(6deg);
+  }
+  
+  .sticky3 {
+    display: block;
+    background-color: #33FF66;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    text-align: left;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+  }
+  
+  .sticky4 {
+    display: block;
+    background-color: lightskyblue;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    -webkit-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+    z-index: 5;
+  }
+
+  .sticky5 {
+    position: absolute;
+    bottom: -50px;
+    z-index: 10;
+
+    -webkit-transform: rotate(6deg);
+    -o-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    transform: rotate(6deg);
+  }
+
+  .sticky-cont
+  {
+    position: absolute;
+    /* top: 0; */
+    right: 40px;
+    bottom: -40px;
+  }
+
+  .dental-visit {
+    max-width: 630px !important;
+  }
+
+  .dental-xray {
+    width: 270px;
+    position: absolute;
+    top: 0;
+    right: 17px;
+    transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+    filter: drop-shadow(3px 3px 3px black);
+  }
+  
+  .paper-clip {
+    position: absolute;
+    right: 20px;
+    top: -7px;
+    height: 100px;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+
+/* ------------------------------------------------------------------------------------------  */
+/* forums (with edits) https://archiveofourown.org/works/45621295/chapters/114797212 */
+
+
+/* .postODD details {
+  margin: 0px;
+} */
+
+.postCONTENT img {
+    max-width: 270px;
+}
+
+
+.chrome-window-ext details > summary ,
+.yt-container details > summary ,
+.reddit-comment-react details > summary ,
+.rd-bubble details > summary ,
+.yt-like-cont details > summary ,
+details.yt-subscribe-cont > summary ,
+.tunglenotes-cont details > summary ,
+.snap-cont-outer details > summary ,
+.comp-cont details > summary ,
+.polaroid-cont-outer details > summary ,
+.not-sent-cont details > summary ,
+.postODD details > summary ,
+.tw-share details > summary {
+    list-style: none;
+}
+
+.chrome-window-ext details summary::-webkit-details-marker,
+.chrome-window-ext details summary::marker,
+.yt-container details summary::-webkit-details-marker,
+.yt-container details summary::marker,
+.reddit-comment-react details summary::-webkit-details-marker,
+.reddit-comment-react details summary::marker,
+.rd-bubble details summary::-webkit-details-marker,
+.rd-bubble details summary::marker,
+.yt-like-cont details summary::-webkit-details-marker,
+.yt-like-cont details summary::marker,
+details.yt-subscribe-cont summary::-webkit-details-marker,
+details.yt-subscribe-cont summary::marker,
+.tunglenotes-cont details summary::-webkit-details-marker,
+.tunglenotes-cont details summary::marker,
+.snap-cont-outer details summary::-webkit-details-marker,
+.snap-cont-outer details summary::marker,
+.comp-cont details summary::-webkit-details-marker,
+.comp-cont details summary::marker,
+.polaroid-cont-outer details summary::-webkit-details-marker,
+.polaroid-cont-outer details summary::marker,
+.not-sent-cont details summary::-webkit-details-marker,
+.not-sent-cont details summary::marker,
+.postODD details summary::-webkit-details-marker,
+.postODD details summary::marker,
+.tw-share details summary::-webkit-details-marker,
+.tw-share details summary::marker {
+  display: none;
+}
+
+summary.checkbox {
+    height: 13px;
+    width: 13px;
+    background: white;
+    border: 1px gray solid;
+    border-radius: 3px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.checkbox-cont {
+    position: absolute;
+    /* margin: 18px auto;
+    padding: 0px; */
+}
+
+.checkbox-cont[open] summary.checkbox{
+    height: 13px;
+    width: 13px;
+    background-color: #3374ec;
+    border-radius: 3px;
+    background-image: url(https://i.imgur.com/24X7Y59.png);
+}
+
+.window2 {
+    text-align: left;
+    margin: 20px auto;
+    /* width: 81.5%; */
+    max-width: 700px;
+  }
+  
+  
+.forumbackground {
+    display: inline-block;
+    background-color: #eff1fe;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  
+.forumnav {
+    color: #3c576b;
+    font-size: small;
+    cursor: pointer;
+  }
+  
+.threadtitle {
+    background-color: #5f8099;
+    color: #FFFFFF;
+    border-color: #5f8099;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /* width: 100%; */
+    padding: 3px;
+    height: 1.5em;
+    font-size: biggest;
+  }
+
+.username4c {
+  color: #3a7050;
+  margin-left: 22px;
+}
+
+.username4c::before {
+    /* content: ''; */
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border: 1px gray solid;
+    position: absolute;
+    border-radius: 3px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.greenText {
+    color: #81954e;
+}
+
+.redText {
+    color: #b33731;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.darkGrayText {
+    color: #323351;
+}
+
+.postODD {
+    float: left;
+    font-family: sans-serif;
+    /* width: 80%; */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: left;
+    color: #000000;
+    background-color: #d7d9ee;
+    /* margin-left: auto; */
+    margin-right: auto;
+    margin-top: 5px;
+    display: block;
+    border-color: #bdc3d4;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    margin-left: 20px;
+    /* min-height: 200px */
+    min-width: 255px;
+  }
+
+.postODD::before {
+    content: "\00BB";
+    position: absolute;
+    color: #bcc4d6;
+    left: -20px;
+    font-size: 30px;
+    top: 3px;
+}
+
+.postCONTENT {
+    font-size: 14px;
+    padding-left: 30px;
+    padding-right: 10px;
+    text-align: left;
+}
+
+.dateandtime {
+   font-size: small;
+   padding-right: 10px;
+   /* color: #A7AEB4;
+   text-align: right; */
+}
+
+.dateandtime::after {
+    content: url(https://i.imgur.com/v2kccYs.png);
+    position: absolute;
+    cursor: pointer;
+    margin-top: 0px;
+}
+   
+.quoteinwhite ~ p {
+    float: left;
+    clear: both;
+}
+ .quoteinwhite {
+    float: left;
+    /* width: 96%; */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: left;
+    color: #000000;
+    background-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    /* margin-top: 2%; */
+    display: block;
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+  }
+  
+.usernameWROTE {
+    font-weight: bold;
+    color: #5f8099;
+  }
+
+.postMOD {
+    float: left;
+    /* width: 80%; */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: justify;
+    color: #000000;
+    background-color: #faf8e6;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    /* min-height: 200px */
+  }
+  
+.fadingTEXT {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+.fadingTEXT:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+  
+.readmore {
+    font-size: big;
+    text-align: center;
+    color: #5f8099;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+.ModIcon {
+   width: 15px;
+   height: auto;
+   margin-bottom: -2px;
+  }
+
+  /* ----------------------reddit mock ---------------------------- */
+/* made by jihn https://codepen.io/jihnari/pen/jOmMoQX */
+
+.reddit-img {
+    max-width: 350px;
+    /* filter: blur(0.7px); */
+}
+
+.text-color-gray {
+    color: #9F9FA1;
+  }
+  .right{
+    float:right;
+  }
+  
+  .text-size-12{
+    font-size:1.2em;
+  }
+  .text-bold{
+    font-weight:bold;
+  }
+  .padding-left-20 {
+    padding-left: 20px;
+  }
+  
+  
+  /*reddit*/
+  /*
+  i do not, i repeat do NOT remember making vr0-2. i mean, i remember thinking "i should fix that weird issue where sometimes things collapse instead of float", i remember sitting down, i remember thinking "what if tables" but i DO NOT remember what it does or how it works. idk if half of that even needs to be there and honestly at this point i dont care. i also remeber thinking "GOTTA NEST THOSE DIVS" which we... appparently did not do. so that's. that's cool. 
+  
+  the last thing we might wanna do here is use the fadeout function and place the 'view all comments' button over top of it. rn im tired tho. messing w relative/ablosute is one of my least favorite things. 
+  */
+  .rd-font{
+    font-family:verdana, arial, helvetica, sans-serif;
+    /* background-color: white; */
+    /*make sure this didnt break everything*/
+    /* color:black; */
+    font-size: 13px;
+    padding: 6px;
+    max-width: 600px;
+    margin: 30px auto;
+  }
+  .rd-view-box {
+    background: #0079D3;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+    font-weight:bold;
+    padding: 7px;
+    margin: 0 5px -5px 5px;
+    cursor: pointer;
+  }
+  .rd-signup-box {
+    background: #0079D3;
+    border-radius: 14px;
+    text-align: center;
+    color: white;
+    padding: 7px 5px 7px 5px;
+    margin: 0px 5px -5px 5px;
+    font-size:0.8em;
+  }
+  .rd-sortby{
+    font-size:0.8em;
+    padding-left:5px;
+  }
+  .rd-photo-box {
+    background: #d3dce0;
+    border-radius: 18px;
+    color: black;
+    padding: 2px 10px 2px 10px;
+  }
+  .rd-name{
+    text-align: center;
+    font-weight:bold;
+    font-size:1.2em;
+  }
+  .rd-header{
+    font-weight:bold;
+    font-size:1.1em;
+    margin:-5px 0 -5px 0;
+  }
+  .rd-dot { /*idx if i wanna go down this path*/
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #bbb;
+    margin-bottom: -15px;
+  }
+  .rd-div1{
+    border-bottom: 8px solid #EEEFF1;
+    padding-bottom:18px;
+    padding-left:8px;
+    margin-bottom: 10px;
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+  .rd-div2{
+    border-bottom: 1.5px solid #EEEFF1;
+  }
+  .rd-vote{
+    height:1.8em;
+    display: inline-block;
+    padding-top:5px;
+    padding-bottom:5px;
+    cursor: pointer;
+  }
+  .rd-poster{
+    font-size: .8em;
+    margin-bottom: 15px;
+  }
+  .rd-op {
+    color:#25A0ED;
+    font-weight:bold;
+    cursor: pointer;
+  }
+
+  .rd-op:hover {
+    text-decoration: underline;
+  }
+
+  .rd-link{
+    color:#25A0ED;
+  }
+  .rd-down-arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2.5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin: 0px 0 2px 7px;
+  }
+  .rd-small{
+    font-size: .8em;
+    display: inline-block;
+    padding-bottom:5px;
+  }
+
+  .rd-small > strong:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .rd-vr0 {
+    display: table;
+    padding: 10px 0 0px 30px;
+    border-bottom: 1px solid #EEEFF1;
+  }
+  .rd-vr1 {
+    display: table;
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0 5px 5px;
+    border-left: 1px solid #EEEFF1;
+  }
+  .rd-vr2 {
+    display: table;
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0px 5px 5px;
+    border-left: 1px solid #EEEFF1;
+  }
+  .rd-vr-not {
+    display: table;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0 5px 0;
+  }
+  .rd-gray-text {
+    color: #657685;
+  }
+
+  .rd-bubble {
+    color: #787C7F;
+    font-size: .8em;
+    padding: 12px 5px 3px 5px;
+    margin-bottom:5px;
+    border-radius: 16px;
+    border: 1px solid #EEEFF1;
+    /* cursor: pointer; */
+    display: inline;
+  }
+
+  .rd-bubble p {
+    display: inline;
+    cursor: text;
+  }
+  
+  .rd-bubble details, .rd-bubble summary {
+    display: inline-block;
+  }
+
+  /* toggle reddit up / down vote, fake tri state */
+  details.rd-up-cont[open] .unliked,
+  details.rd-down-cont[open] .unliked,
+  details.rd-up-cont:not([open]) .liked,
+  details.rd-down-cont:not([open]) .liked {
+    display: none;
+  }
+
+  details.rd-up-cont:not([open]) .unliked,
+  details.rd-down-cont:not([open]) .unliked,
+  details.rd-up-cont[open] .liked,
+  details.rd-down-cont[open] .liked {
+    display: inline-block;
+  }
+
+  .inactive {
+    display: none;
+    cursor: not-allowed !important;
+  }
+
+  .rd-bubble:has(details[open]) details:not([open]) {
+    display: none;
+  }
+
+ .rd-bubble:has(.rd-down-cont[open]) .rd-arrow-up.inactive,
+ .rd-bubble:has(.rd-up-cont[open]) .rd-arrow-down.inactive {
+    display: inline-block;
+  }
+
+  .rd-div1 p, .rd-vr.rd-div2 p {
+    margin: 0px;
+  }
+
+  .reddit-comment-react details {
+    margin: 0px;
+  }
+
+  .reddit-comment-react {
+    display: inline-flex;
+  }
+
+/* toggle liked reddit COMMENT (like only) */
+.reddit-react-like[open] .unliked,
+.reddit-react-like:not([open]) .liked,
+.reddit-react-dislike[open] .unliked,
+.reddit-react-dislike:not([open]) .liked {
+  display: none;
+}
+
+.reddit-react-like:not([open]) .unliked,
+.reddit-react-like[open] .liked,
+.reddit-react-dislike:not([open]) .unliked,
+.reddit-react-dislike[open] .liked {
+  display: inline;
+}
+
+.reddit-comment-react:has(details[open]) details:not([open]) {
+  display: none;
+}
+
+.reddit-comment-react:has(.reddit-react-like[open]) .react-dislike.inactive,
+.reddit-comment-react:has(.reddit-react-dislike[open]) .react-like.inactive
+{
+   display: inline-block;
+}
+
+.rd-comment-react-reply {
+  padding-left: 13px;
+  margin-top: -7px;
+}
+
+  .rd-left {
+    margin-left: 2px;
+  }
+  
+  .rd-arrow-text{
+    padding-top:2px;
+    mmargin-bottom:10px;
+    vertical-align: super;
+    display: inline-block;
+  }
+  .rd-arrow-up{
+    padding-top:0px;
+    padding-bottom:0px;
+    height:1.5em;
+    cursor: pointer;
+  }
+  .rd-arrow-down{
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+      height:1.5em;
+      cursor: pointer;
+  }
+  .rd-elispes{
+    float:right;
+    padding-right:10px;
+    font-size:1.0em;
+    cursor: pointer;
+  }
+
+/* --------------------------------------------------------------- */
+
+  /* -------------------- youtube ----------------------- */
+/* mock by jihn https://codepen.io/jihnari/pen/oNWxLPO */
+
+#youtube-view {
+    background: white;
+  }
+  /*universal*/
+  .wrapper {
+    position: relative;
+    /* height: 308px; */
+  }
+  /* .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  } */
+  .stay-block {
+  overflow: auto;
+  display: block;
+  }
+  
+  .right{
+  float: right;
+  }
+  .left{
+    float: left;
+  }
+  .stay{
+  width:100%;
+  }
+  .clear{
+    clear: both;
+  }
+  .clear2{
+    overflow: auto;
+  }
+  
+  .text-color-blue{
+    color: blue;
+    text-decoration: none;
+  }
+  
+  .text-color-red {
+    color: red;
+    text-decoration: none;
+  }
+  .text-color-gray{
+    color: #b1b1b3;
+  }
+  .text-color-lgray {
+    color: gray;
+  }
+  .text-size-12{
+    font-size:1.2em;
+  }
+  .text-size-8{
+    font-size:0.8em;
+  }
+  
+  .padding-left-50 {
+    padding-left: 50px;
+  }
+  .margin-bottom-5{
+    margin-bottom:5px;
+  }
+  .padding-bottom-5{
+    padding-bottom:5px;
+  }
+  .padding-left-5{
+    padding-left:5px;
+  }
+  .padding-bottom-15{
+    padding-bottom:15px;
+  }
+  .padding-right-5{
+    padding-right:5px;
+  }
+  
+  
+  .shift-zero{
+  margin-top:0;
+  }
+  .shift-up{
+  margin-top:-15px;
+  }
+  .shift-up-10{
+  margin-top:-10px;
+  }
+  
+  
+  .dot {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #bbb;
+    margin-bottom: -15px;
+  }
+  
+  /*youtube*/
+  
+  .yt-desc {
+    margin: -10px 7px 6px 7px;
+    display: inline-block;
+  }
+
+    
+  .yt-profile0 {
+    background-image: url(https://i.imgur.com/wQNwcU9.jpg);
+  }
+
+  .yt-profile1 {
+    background-image: url(https://i.imgur.com/7wS9Bxb.png);
+  }
+
+  .yt-profile2 {
+    background-image: url(https://i.imgur.com/SbF4SeO.png);
+  }
+
+  .yt-profile3 {
+    background-image: url(https://i.imgur.com/EkKW6ta.png);
+  }
+
+  .yt-profile4 {
+    background-image: url(https://i.imgur.com/jgoW4MU.png);
+  }
+  
+  
+  .yt-techluver {
+    background-image: url(https://i.imgur.com/RvjZZi1.png);
+    background-size: contain;
+  }
+  
+  .yt-font{
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  }
+
+  .yt-red-line-cont {
+    position:absolute;
+    width:100%;
+    height:5px;
+    bottom: 30px;
+    background-color: rgba(246,246,246,.3);
+  }
+
+  .yt-red-line {
+    background-color: red;
+    width: 30%;
+    height: 100%;
+    transition: all 1s ease-in;
+  }
+
+  .yt-red-line-50 {
+    position:absolute;
+    width:100%;
+    height:5px;
+    background:linear-gradient(to right, red 50%,rgba(246,246,246,.3) 50%);  
+    bottom: 30px;
+  }
+  .yt-red-line-30 {
+    position:absolute;
+    width:100%;
+    height:5px;
+    background:linear-gradient(to right, red 30%,rgba(246,246,246,.3) 70%);  
+    bottom: 30px;
+  }
+  .yt-red-line-70 {
+    position:absolute;
+    width:100%;
+    height:5px;
+    background:linear-gradient(to right, red 70%,rgba(246,246,246,.3) 30%);  
+    bottom: 30px;
+  }
+  
+  .yt-border-bottom-gray  {
+    border-bottom: 1px solid #b1b1b3;
+  }
+  .yt-comment{
+    border-bottom: 1px solid #b1b1b3;
+    margin-top: 10px !important;
+    padding-bottom:10px;
+    overflow: auto;
+  }
+  .yt-add-comment {
+    /* margin-top:-8px;
+    overflow: auto; */
+    display: block;
+    padding-bottom:5px;
+  
+  }
+  
+  .yt-border-top-bottom-gray {
+    border-bottom: 1px solid #b1b1b3;
+    border-top: 1px solid #b1b1b3;
+    padding: 5px;
+  }
+  .yt-border-top-gray {
+    border-top: 1px solid #b1b1b3;
+    padding: 5px;
+  }
+  
+  .yt-link {
+    cursor: pointer;
+    color: blue;
+    text-decoration: none; 
+  }
+  
+  /*idk if this works, we've never used it*/
+  .yt-down-arrow {
+    margin-top: 10px;
+    margin-right: 5px;
+    border: 6px solid transparent;
+    border-top-color: #000;
+    display: inline-block;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .yt-up-arrow {
+    margin-bottom: 10px;
+    margin-right: 5px;
+    border: 6px solid transparent;
+    border-bottom-color: #000;
+    display: inline-block;
+    float: right;
+  }
+
+  p.margin-0 {
+    margin: 0px;
+  }
+  
+  .yt-stats{
+    width: 18%;
+    text-align:center;
+    display: inline-block;
+    padding-left:10px;
+    font-size:.8em;
+  }
+  
+  .yt-bg-gray{
+   background-color: #bbb;
+  }
+  
+  .yt-floatdot{
+    background-size: contain;
+    cursor: pointer;
+    float:left;
+    margin-left:8px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #bbb;
+    margin-bottom: -15px;
+  }
+  
+  .yt-sub-button{
+    float:right;
+    font-size:0.8em;
+    color: red;
+    padding-right:5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  .yt-buttons-cont {
+    display: inline;
+  }
+  
+  .yt-vid-img{
+    width:100%;
+    /* height: 40%; */
+    /* cursor: pointer; */
+    margin-bottom: -8px;
+  }
+
+  .yt-play-vid , .yt-pause-vid {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 0px 5px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+  }
+  
+  .yt-skip-vid , .yt-replay-vid {
+    position: absolute;
+    bottom: -2px;
+    /* left: 32px; */
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    /* margin-bottom: -4px; */
+  }
+
+  .skip-toggle:not([open]) .yt-skip-vid,
+  .skip-toggle[open] .yt-replay-vid {
+    display: inline-block;
+  }
+
+  .skip-toggle[open] .yt-skip-vid,
+  .skip-toggle:not([open]) .yt-replay-vid {
+    display: none;
+  }
+
+  /* play toggle */
+  .play-toggle:not([open]) .yt-pause-vid ,
+  .play-toggle[open] .yt-play-vid {
+    display: none;
+  }
+  
+  .play-toggle:not([open]) .yt-play-vid ,
+  .play-toggle[open] .yt-pause-vid {
+    display: inline-block;
+  }
+
+  .yt-container:has(.play-toggle[open]) .yt-red-line {
+    width: 75%;
+    transition: all 5s ease;
+    /* transition-duration: 1000s; */
+  }
+
+  /* toggle playing video result */
+  .yt-container:has(.play-toggle:not([open])) .playing,
+  .yt-container:has(.play-toggle[open]) .thumbnail {
+    display: none;
+  }
+
+  .yt-container:has(.play-toggle:not([open])) .thumbnail,
+  .yt-container:has(.play-toggle[open]) .playing {
+    display: inline-block;
+  }
+
+  .yt-container p {
+    margin: 0px;
+  }
+
+  .play-toggle {
+    position: absolute;
+    display: inline-flex;
+    left: 0px;
+    bottom: -3px;
+    height: 30px;
+    width: 30px;
+    margin: 0px;
+  }
+
+  .yt-vid-end {
+    background-color: black;
+    width: 100%;
+    display: block;
+    /* height: 40%; */
+    display: none;
+    margin-bottom: -8px;
+  }
+
+  .yt-vid-end img {
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+    width: 30%;
+  }
+
+  /* vol toggle */
+  .vol-toggle:not([open]) .vol-unmuted ,
+  .vol-toggle[open] .vol-muted {
+    display: none;
+  }
+  
+  .vol-toggle:not([open]) .vol-muted ,
+  .vol-toggle[open] .vol-unmuted {
+    display: inline-block;
+  }
+
+  .vol-toggle {
+    position: absolute;
+    display: inline-flex;
+    left: 80px;
+    bottom: -3px;
+    height: 30px;
+    width: 30px;
+    margin: 0px;
+  }
+
+  .vol-toggle img {
+    width: 100%;
+  }
+
+  .vol-muted {
+    height: 25px;
+    margin-top: 4px;
+  }
+
+  .audio-button {
+    position: absolute;
+    /* font-size: 20pt; */
+    /* left: 10px; */
+    text-decoration: none;
+  }
+
+  audio {
+    position: absolute;
+    /* width: 100px; */
+    opacity: 0;
+    left: 0;
+  }
+    
+  .skip-toggle {
+      position: absolute;
+      display: inline-flex;
+      left: 38px;
+      bottom: -3px;
+      height: 29px;
+      width: 30px;
+      margin: 0px;
+  }
+
+  .yt-container:has(.skip-toggle[open]) .yt-red-line {
+    width: 100%;
+    transition: all 1s ease;
+  }
+
+  .yt-container:has(.skip-toggle[open]) .yt-vid-end {
+    display: inline-block;
+  }
+
+  .yt-container:has(.skip-toggle[open]) .yt-vid-img {
+    display: none;
+  }
+
+  .yt-views-text{
+    font-size:0.8em;
+    font-weight: normal;
+    color: #b1b1b3;
+  }
+  .yt-title{
+    font-size:1.2em;
+    font-weight: bold;
+  }
+  .yt-title-shift {
+    margin-top:15px !important;
+  /* margin-left: 5px !important; */
+  }
+  
+  .yt-border-top-bottom-gray.clear2 {
+    font-size: 14px;
+    overflow: hidden;
+  }
+
+  .yt-container {
+    max-width: 550px;
+    min-width: 290px;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .yt-border-top-bottom-gray.clear2 p ,
+  .yt-subscribe-cont {
+    margin: 0px;
+  }
+
+  /* toggle subscribed */
+  .yt-subscribe-cont[open] .not-subscribed,
+  .yt-subscribe-cont:not([open]) .subscribed {
+    display: none;
+  }
+
+  .yt-subscribe-cont:not([open]) .not-subscribed,
+  .yt-subscribe-cont[open] .subscribed {
+    display: inline;
+  }
+
+  /* toggle liked video */
+  .yt-thumbsup-cont[open] .unliked,
+  .yt-thumbsup-cont:not([open]) .liked,
+  .yt-thumbsdown-cont[open] .unliked,
+  .yt-thumbsdown-cont:not([open]) .liked {
+    display: none;
+  }
+
+  .yt-thumbsdown-cont:not([open]) .unliked,
+  .yt-thumbsdown-cont[open] .liked,
+  .yt-thumbsdown-cont:not([open]) .unliked,
+  .yt-thumbsdown-cont[open] .liked
+  {
+    display: inline;
+  }
+
+  .yt-like-cont 
+  {
+    display: inline-flex;
+  }
+
+  .yt-like-cont:has(details[open]) details:not([open]) {
+    display: none;
+  }
+  
+  .yt-like-cont:has(.yt-thumbsup-cont[open]) .yt-thumbsdown-cont.inactive,
+  .yt-like-cont:has(.yt-thumbsdown-cont[open]) .yt-thumbsup-cont.inactive
+  {
+     display: inline-block;
+  }
+
+  .yt-like-cont summary {
+    /* width: 50px;
+    height: 50px; */
+    width: 100%;
+    height: 50px;
+    /* background-color: blue; */
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .yt-like-cont details {
+    margin: 0px;
+  }
+
+  .yt-like-cont p {
+    margin-bottom: 0px;
+  }
+
+/* --------------------------------------------------------------- */
+  
+/* -----------------tumblr style tweaks --------------------------- */
+  /* https://archiveofourown.org/works/11474979 */
+
+
+  .tungle {
+    max-width: 500px;
+    font-family: Gibson,Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
+    display: table;
+    margin: auto;
+    /* color: #444444; */
+    /* margin: 10px 0; */
+  }
+  
+  .tunglebody {
+    /* background-color: #ffffff; */
+    border-radius: 3px;
+    border-style: solid;
+    border-width: .1em;
+    border-color: #cccccc;
+    float: left;
+    max-width: 100%;
+    position: relative;
+    padding: 15px 0 0;
+  }
+
+  .tunglebody p {
+    margin: 0px;
+  }
+  
+  .tungleurl {
+    position: relative;
+    top: -.2em;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 50px;
+    margin-left: 10px;
+    line-height: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .tungletext {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 10px;
+    line-height: 21px;
+    font-size: 14px;
+    width: 92%;
+    word-wrap: break-word;
+  }
+  
+  .tungletext a {
+    color: #444444;
+  }
+  
+  .tungleh {
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 47px;
+    width: 92%;
+    word-wrap: break-word;
+  }
+  
+  .tungletags {
+    display: inline-block;
+    width: 92%;
+    font-size: 13px;
+    color: #8f8f8f;
+    margin-top: 15px;
+    line-height: 20px;
+    position: relative;
+    margin-left: 10px;
+  }
+  
+  .tungletag {
+    margin-right: 12px;
+    cursor: pointer;
+  }
+  
+  /* .tungletag:first-of-type {
+    margin-left: 0px;
+  } */
+  
+  .tunglenotes {
+    font-size: 14px;
+    font-weight: bold;
+    color: #8f8f8f;
+    line-height: 45px;
+    position: relative;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .tungleicons {
+    height: auto;
+    width: 120px;
+    float: right;
+    margin-right: -7px;
+    margin-top: 6px;
+    cursor: pointer;
+  }
+
+  .tunglenotes-cont p {
+    display: inline;
+  }
+
+  .tunglenotes-cont details {
+    display: inline-block;
+    float: right;
+    margin: 0px;
+    clear: both;
+  }
+
+  .tunglenotes-cont:has(details[open]) .unliked,
+  .tunglenotes-cont:has(details:not([open])) .liked {
+    display: none;
+  }
+
+  .tunglenotes-cont:has(details:not([open])) .unliked,
+  .tunglenotes-cont:has(details[open]) .liked {
+    display: block;
+  }
+
+  .tungleimg {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .tunglequote {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 1px;
+    margin-left: 35px;
+    line-height: 42px;
+    font-size: 36px;
+    width: 89%;
+    word-wrap: break-word;
+    font-family: Georgia, serif;
+    text-indent: -15px;
+  }
+  
+  .tunglequote:before {
+    content: "\201C";
+  }
+  
+  .tunglequote:after {
+    content: "\201D";
+  }
+  
+  .quotesourcedash {
+    width: 20px;
+    margin-left: 20px;
+  }
+  
+  .quotesource {
+    display: inline-block;
+    margin-bottom: 15px;
+    line-height: 21px;
+    font-size: 14px;
+    width: 90%;
+    word-wrap: break-word;
+  }
+  .tungletwo_one {
+    width: 49.5%;
+    height: 177px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tungletwo_two {
+    width: 49.5%;
+    height: 177px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+  
+  .tungletwo_three {
+    width: 49.5%;
+    height: 412px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tungletwo_four {
+    width: 49.5%;
+    height: 412px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+
+  .tunglethree_one {
+    width: 32.8%;
+    height: 120px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tunglethree_two {
+    width: 33%;
+    height: 120px;
+    margin-top: 4px;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 4px;
+  }
+  
+  .tunglethree_three {
+    width: 32.8%;
+    height: 120px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+
+  .tungleask {
+    /* background-color: #f2f2f2; */
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    float: left;
+    position: relative;
+    padding: 15px 14px 18px;
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 10px;
+    line-height: 21px;
+    font-size: 14px;
+    /* width: 80%; */
+    word-wrap: break-word;
+    margin-right: 64px;
+    margin-bottom: 10px;
+  }
+  
+  .tungleasktip {
+    display: inline;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #cccccc;
+    right: -8px;
+    top: 10px;
+  }
+  
+  .tungleaskicon {
+    display: inline-block;
+    /* float: right; */
+    height: 45px;
+    width: 45px;
+    margin-top: -23px;
+    border-radius: 24px;
+    position: absolute;
+    margin-right: -70px;
+    right: 10px;
+    top: 24px;
+    cursor: pointer;
+  }
+  
+  .tungleasker {
+    color: #a6a6a6;
+    font-size: 13px;
+    display: inline-block;
+    width: 100%;
+    line-height: 21px;
+    margin-bottom: 7px;
+  }
+
+  .tungleasker b {
+    cursor: pointer;
+  }
+  
+  
+.tunglechat {
+  display: inline-block;
+  font-size: 14px;
+  width: 92%;
+  line-height: 1.4;
+  font-family: Courier, monospace;
+  padding-top: 3px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 3px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.tungleline {
+  display: block;
+  padding-top: 6px;
+  padding-right: 0px;
+  padding-bottom: 6px;
+  padding-left: 0px;
+  width: 100%;
+}
+
+.tungleline:first-of-type {
+  padding-top: 0px;
+}
+
+.tungleline:last-of-type {
+  padding-bottom: 0px;
+}
+
+.tungleline:nth-of-type(even) {
+  background: #fdfdfd;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.tungleline>strong:after {
+  content: "\A0";
+}
+
+.reblog {
+  height: 15px;
+  width: auto;
+  /* margin-bottom: 5px; */
+}
+
+.reblogheader {
+  position: relative;
+  line-height: 25px;
+  padding-top: 15px;
+  padding-left: 10px;
+  width: 98%;
+  display: inline-block;
+  border-top: 1px solid #e7e7e7;
+  margin-top: 5px;
+}
+
+.reblogurl {
+  position: relative;
+  top: -.2em;
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  line-height: 25px;
+  height: 25px;
+  color: #8f8f8f;
+  cursor: pointer;
+}
+
+.reblogicon {
+  border-radius: 2px;
+  width: 25px;
+  height: 25px;
+  vertical-align: baseline;
+  cursor: pointer;
+}
+
+.sourceurl {
+  position: relative;
+  font-weight: 700;
+  font-size: 13px;
+  vertical-align: top;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.reblogorigin {
+  width: 100%;
+  word-wrap: break-word;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+}
+
+.reblogtext {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+  line-height: 21px;
+  font-size: 14px;
+  width: 92%;
+  word-wrap: break-word;
+}
+
+.reblogtext a {
+  color: #444444;
+}
+
+/* --------------------------------------------------------------- */
+/* twitter, with threads https://archiveofourown.org/works/35006431 */
+
+.tw {
+    max-width: 500px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 20px auto;
+    border-style: solid;
+    border-width: .1em;
+    border-color: lightgray;
+    padding: 1em;
+  }
+  
+.tw-table {
+    table-layout: fixed;
+    vertical-align: top;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+.tw-td-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+.tw-td-thread {
+    border-left-style: solid;
+    border-color: rgb(207, 217, 222);
+    border-width: 2px;
+  }
+  
+.tw-icon-img {
+    width: 45px;
+    height: 45px;
+    float: left;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+.tw-post-verified {
+    height: 1em;
+    padding-left: 0.2em;
+    position: relative;
+    top: 0.1em;
+    content: url("https://i.imgur.com/2oTuVdz.png");
+  }
+  
+.tw-post {
+    overflow: hidden;
+    padding-left: 0.5em;
+  }
+  
+.tw-post-meta-user {
+    font-weight: bold;
+  }
+  
+.tw-post-meta-handle {
+    color: slategray;
+  }
+  
+.tw-post-meta-time {
+    color: slategray;
+  }
+  
+.tw-post-meta-time:before {
+    content: '\0B7';
+    padding-right: 0.2em;
+  }
+  
+.tw-embed {
+    border-style: solid;
+    border-width: .1em;
+    border-color: darkgray;
+    padding: 1em;
+    border-radius: 0.5em;
+  }
+
+  img.tw-embed
+  {
+    width: 85%;
+  }
+  
+.tw-ref {
+    color: rgb(29, 155, 240);
+    cursor: pointer;
+  }
+  
+.tw-reply {
+    color: slategray;
+  }
+  
+  
+.tw-share details {
+    display: flex;
+    width: 100%;
+    margin: 10px auto;
+    height: 20px;
+}
+
+/* 
+.tw-show-open is displayed when the details is open, 
+hidden when the deatils is closed.
+.tw-show-close is displayed when the deatils is closed
+hidden when the defails is open.
+*/
+.tw-share details[open] .tw-show-open,
+.tw-share details:not([open]) .tw-show-close
+{
+    display: flex;
+}
+
+.tw-share details[open] .tw-show-close,
+.tw-share details:not([open]) .tw-show-open
+{
+    display: none;
+}
+
+
+.tw-share {
+    /* background-image: url("https://64.media.tumblr.com/d46b27345c9cea4790756a57e42ccb6c/f2497834d8606ba7-ad/s500x750/10e4a6e3ba606786d94c2d1ddb099bf2516fd704.png"); */
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+    width: 100%;
+    min-height: 25px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6px !important;
+    position: relative;
+  }
+
+  .tw-share-icon {
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 100%;
+    min-height: 20px;
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+  }
+
+  .tw-share-quotes {
+    background-image: url("https://i.imgur.com/HOvzkw7.png");
+    padding-left: 25px;
+    background-position-y: -1px;
+  }
+
+  .tw-share-quotes.tw-show-open {
+    background-image: url("https://i.imgur.com/xBcBsT9.png");
+  }
+
+  .tw-share-retwts {
+    background-image: url("https://i.imgur.com/uOLZWeh.png");
+    background-position-y: -1px;
+    padding-left: 27px;
+  }
+
+  .tw-share-retwts.tw-show-open {
+    background-image: url("https://i.imgur.com/hlKje5j.png");
+  }
+
+  .tw-share-hearts {
+    background-image: url("https://i.imgur.com/s6gMzzW.png");
+    background-position-y: -1px;
+    padding-left: 27px;
+  }
+
+  .tw-share-hearts.tw-show-open {
+    background-image: url("https://i.imgur.com/L0R5oMT.png");
+  }
+
+  .tw-share-links {
+    background-image: url("https://i.imgur.com/WMCCktQ.png");
+    background-position-y: -4px;
+    padding-left: 25px;
+  }
+
+  .tw-share-links.tw-show-open {
+    background-image: url("https://i.imgur.com/rcwDeZu.png");
+  }
+  
+.tw-td-rt-1 {
+    width: 45px;
+    background-image: url("https://64.media.tumblr.com/a926f84106d9146ffdff9f264bb67e1f/f2497834d8606ba7-e9/s75x75_c1/1db007980d847c8aa07beb1b230a398652a3a340.png");
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position-x: right;
+    background-position-y: center;
+    padding-bottom: 0.2em;
+  }
+  
+.tw-td-rt-2 {
+    padding-left: 0.5em;
+    padding-bottom: 0.2em;
+  }
+  
+.tw-rt {
+    color: rgb(83, 100, 113);
+    font-weight: bold;
+    font-size: small;
+  }
+  
+.tw p {
+    margin: 0;
+  }
+/* --------------------------------------------------------------- */
+
+/* dialog skin by me https://archiveofourown.org/works/43975602/chapters/110571546 */
+
+/* p {
+    margin: 1.286em auto;
+    padding: 0;
+    line-height: 1.5;
+  } */
+
+.announce-div
+{
+  border-radius: 10px;
+  border: thin black solid;
+  /* max-width: 270px !important; */
+  opacity: 0.85;
+}
+
+.announce-p {
+    display: inline-block;
+    margin: auto;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+.convo-container {
+    display: table;
+    padding: 10px;
+    min-width: 300px;
+    max-width: 416px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 13px;
+    background-color: green;
+  }
+  
+  p.convo-break {
+    display: flex;
+    width: 100%;
+    margin: 0;
+  }
+  
+  p.convo-pad {
+    display: flex;
+    width: 100%;
+    margin: 24em auto;
+  }
+  
+  .gz {
+    background: url("https://i.imgur.com/ig6AvJU.png") no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .gz2 {
+    background: url("https://i.imgur.com/Ys1XcUY.png") repeat center center scroll;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+
+  .fbi-bg {
+    background: url("https://i.imgur.com/6ZZCvx7.png") repeat center center scroll;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+  
+  .center {
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .padding-up {
+    padding-top: 3.5em;
+  }
+  
+  /* left aligned icon and dia */
+  .convo-left {
+      min-height: 80px;
+      float: left;
+      display: flex;
+  }
+  
+  .convo-left > p > .dia::after {
+  content: '';
+  border: 10px solid transparent;
+  border-right-color: #8f8e8f;
+  border-left: 0;
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  margin-top: -10px;
+  }
+  
+  /* .convo-left > p:nth-child(1) {
+    margin-top: 50%;
+  } */
+  
+  .convo-left > p > .convo-icon {
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 80px;
+    margin-right: 10px;
+    /* top: 50%; */
+  }
+  
+  /* right aligned icon and dia */
+  .convo-right {
+      float: right;
+      min-height: 80px;
+      display: flex;
+      margin-left: auto;
+  }
+  
+  /* .convo-right > p > .dia {
+    text-align: right;
+  } */
+  
+  /* .convo-right > p:nth-child(2) {
+    margin-top: 50%;
+  } */
+  
+  .convo-right > p > .dia::after {
+    content: '';
+    border: 10px solid transparent;
+    border-left-color: #8f8e8f;
+    border-right: 0;
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    margin-top: -10px;
+  }
+  
+  .convo-right > p > .convo-icon {
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 80px;
+    margin-left: 10px;
+  }
+  
+  .convo-icon {
+    max-width: 80px;
+    min-width: 80px;
+    margin: auto;
+    height: auto;
+  }
+  
+  /* center the dialogue box */
+  .convo-left > p:nth-child(1), .convo-right > p:nth-child(2) {
+    margin: auto;
+  }
+  
+  .dia {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    border: 2px solid #8f8e8f;
+    border-radius: 10px;
+    max-width: 470px;
+    padding: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    height: auto;
+    z-index: 5;
+  }
+  
+  .dia-desc {
+    position: relative;
+    text-align: center;
+    border: 2px solid #8f8e8f;
+    border-radius: 10px;
+    max-width: 100px;
+    padding: 10px;
+    margin: 3% auto;
+  }
+  
+  .dia-desc > p {
+    margin: 0;
+  }
+  
+  .white {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .black {
+    background-color: black !important;
+    color: white !important;
+  }
+
+  .tab {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: black;
+    padding-top: 5px;
+    cursor: pointer;
+    margin-top: 2px;
+    font-size: 13px;
+  }
+
+  .bg-tab {
+    color: black;
+    background: lightgray;
+  }
+
+  .active-tab {
+    background-color: gray;
+    color: lightgray;
+  }
+
+  .tab-cont p {
+    margin-top: 2px !important;
+  }
+
+  .tab-cont {
+    height: 24px;
+    background: lightgray;
+    padding-bottom: 5px;
+  }
+
+  .tab-cont details, .tab-cont p {
+    display: inline-block;
+    margin: 0px;
+  }
+
+  /* tab marker toggle show hide*/
+  .tab-cont:has(details[open]) .bg-tab.tab1,
+  .tab-cont:has(details[open]) .active-tab.tab2,
+  .tab-cont:has(details:not([open])) .active-tab.tab1,
+  .tab-cont:has(details:not([open])) .bg-tab.tab2
+  {
+    display: inline-block;
+  }
+
+  .tab-cont:has(details[open]) .bg-tab.tab2,
+  .tab-cont:has(details[open]) .active-tab.tab1,
+  .tab-cont:has(details:not([open])) .bg-tab.tab1,
+  .tab-cont:has(details:not([open])) .active-tab.tab2
+  {
+    display: none;
+  }
+
+
+  /* tab content toggle show / hide */
+  .comp-cont:has(details:not([open])) .tab-content.tab1,
+  .comp-cont:has(details[open]) .tab-content.tab2 
+  {
+    display: block;
+  }
+
+  .tab-content.tab2,
+  .comp-cont:has(details:not([open])) .tab-content.tab2,
+  .comp-cont:has(details[open]) .tab-content.tab1 {
+    display: none;
+  }
+
+  .tab-content {
+    margin-bottom: -7px;
+  }
+
+  .comp-cont {
+    margin: 20px auto;
+    max-width: 500px;
+    min-width: 300px;
+    position: relative;
+    border-top: 30px solid gray;
+    border-radius: 10px;
+    border-right: 4px solid gray;
+    border-left: 4px solid gray;
+    border-bottom: 4px solid gray;
+    background: gray;
+  }
+
+  .comp-cont p {
+    margin: 0px;
+  }
+
+  .comp-cont img {
+    width: 100%;
+    margin-bottom: -6px;
+  }
+
+  .dot-cont {
+    position: absolute;
+    /* background: pink; */
+    top: -22px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+  }
+
+  .comp-dot {
+    width: 15px;
+    position: absolute;
+    height: 15px;
+    /* background: red; */
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .red-dot {
+    background: red;
+    left: 0px;
+  }
+
+  .yellow-dot {
+    background: yellow;
+    left: 20px;
+  }
+
+  .green-dot {
+    background: lightgreen;
+    left: 40px;
+  }
+
+  .comp-info {
+    position: absolute;
+    color: #dd5f30;
+    left: 39%;
+    bottom: 51%;
+    padding: 3px;
+    background-color: white;
+    font-family: monospace;
+    filter: drop-shadow(0px 1px 6px white);
+  }
+
+  /* polaroids */
+
+  .polaroid {
+    margin: 10px auto;
+    max-width: min-content;
+    background: white;
+    padding: 10px;
+    filter: drop-shadow(1px 2px 5px black);
+    height: fit-content;
+  }
+
+  .polaroid p {
+    margin: 0px;
+  }
+
+   /* Hide scrollbar for Chrome, Safari and Opera */
+   .polaroid-cont-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .polaroid-cont-inner {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .polaroid-cont-inner {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-bottom: 50px;
+  }
+
+  .polaroid-cont-outer {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .polaroid-cont-inner2
+  {
+    /* width: 900px; */
+    min-width: 650px;
+    height: 600px;
+    /* width: 700px; */
+    display: block;
+    background-image: url(https://i.imgur.com/Jvc6gCz.jpg);
+    margin: 10px;
+    /* border: 30px solid gray; */
+    border-radius: 20px;
+    position: relative;
+
+    border-top: 20px ridge gray;
+    border-left: 20px groove gray;
+    border-bottom: 20px groove gray;
+    border-right: 20px ridge gray;
+  }
+
+  .polaroid img {
+    max-width: 150px;
+    filter: blur(1.4px);
+  }
+
+  .polaroid-caption {
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    display: inline-block;
+    text-align: left;
+    padding: 6px;
+  }
+
+  .polaroid1 {
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+
+  /* .polaroid3:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0), white);
+    top: 0px;
+    left: 0px;
+  } */
+
+  .polaroid2 {
+    -webkit-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    transform: rotate(4deg);
+    position: absolute;
+    top: -13px;
+    left: 33%;
+  }
+
+  /* .polaroid3 img, .polaroid4 img {
+   filter: unset;
+   max-width: 350px;
+  } */
+
+  /* .polaroid.polaroid3, .polaroid.polaroid4 {
+    max-width: 350px;
+  } */
+
+  .polaroid3 {
+    transform: rotate(12deg);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+
+  .polaroid4 {
+    position: absolute;
+    left: 0px;
+    top: 41%;
+  }
+
+  .polaroid5 {
+    position: absolute;
+    right: 0px;
+    top: 25%;
+  }
+
+  .polaroid6, .polaroid6 img {
+    max-width: 250px;
+  }
+
+  .polaroid2, .polaroid2 img ,
+  .polaroid4, .polaroid4 img ,
+  .polaroid5, .polaroid5 img {
+    max-width: 200px;
+  }
+
+  .sticky4 {
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+  }
+
+  .polaroid6 {
+    position: absolute;
+    left: 29%;
+    bottom: -45px;
+    z-index: 3;
+  }
+
+  .polaroid7 {
+    position: absolute;
+    top: 28%;
+    left: 38%;
+  }
+
+
+  .polaroid-pin {
+    background-image: url(https://i.imgur.com/yH46vgD.png);
+    position: absolute;
+    height: 35px;
+    width: 40px;
+    background-size: cover;
+  }
+
+  .pin1 {
+    left: 31px;
+    top: 0px;
+  }
+
+  .pin2 {
+    top: 0px;
+    left: 200px
+  }
+
+  .polaroid-pin summary {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+  }
+
+  .polaroid-pin[open]
+  {
+    filter: brightness(1.5) drop-shadow(2px 4px 6px blue);
+  }
+
+  .polaroid-pin[open] summary {
+    display: none;
+  }
+
+  .thread {
+    /* display: none; */
+    width: 0px;
+  }
+
+  .polaroid-cont-outer:has(.pin1[open]):has(.pin2[open]) .thread-1-2 {
+    /* display: inline; */
+    width: 312px;
+    transition: all 1s;
+  }
+
+  .thread-1-2 {
+    position: absolute;
+    z-index: 5;
+    /* width: 312px; */
+    height: auto;
+    left: 42px;
+    top: 9px;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+
+
+  .spotify-img {
+    display: block;
+    max-width: 500px;
+    margin: 20px auto;
+  }
+
+  /* snapchats / be reals */
+.snap-all .snap-cont {
+  margin: 20px auto;
+}
+
+.snap-cont-outer {
+  width: 300px;
+  height: 502px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.snap-cont-outer details {
+    display: inline;
+}
+
+.snap-cont-outer summary {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 10;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.snap-cont-outer:has(details[open]) summary:nth-of-type(1) {
+    border-left: 25px darkslategray solid;
+    opacity: 0.07;
+    filter: blur(8px);
+}
+
+
+.snap-cont-outer:has(details:not([open])) summary:nth-of-type(1) {
+    border-right: 25px darkslategray solid;
+    opacity: 0.07;
+    filter: blur(8px);
+    z-index: 12;
+}
+
+.snap-cont-outer details:not([open]) summary {
+    right: 0px;
+
+    /* opacity: 0.05;
+    border-top-left-radius: 90%;
+    border-bottom-left-radius: 90%; */
+
+    /* background-image: url(https://i.imgur.com/8GGZP4N.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    filter: blur(10px); */
+}
+
+.snap-cont-outer details[open] summary {
+    left: 0px;
+    /* background-color: red; */
+}
+
+/* --------------------- snapchat gimmick lmao ---------------------*/
+.snap-cont-inner:has(details[open]
+):has(
+    details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open])
+) {
+    transform: translateY(-502px);
+}
+
+.snap-cont-inner:has(details[open] ~ details[open]
+):has(
+    details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open])
+) {
+    transform: translateY(-1004px);
+}
+
+.snap-cont-inner:has(details[open] ~ details[open] ~ details[open]
+):has(
+    details:not([open]) ~ details:not([open]) ~ details:not([open])
+) {
+    transform: translateY(-1506px);
+}
+
+.snap-cont-inner:has(details[open] ~ details[open] ~ details[open] ~ details[open]
+):has(
+    details:not([open]) ~ details:not([open])
+) {
+    transform: translateY(-2008px);
+}
+
+.snap-cont-inner:has(details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open]
+):has(
+    details:not([open]) 
+) {
+    transform: translateY(-2510px);
+}
+
+.snap-cont-inner:has(details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open]
+) {
+    transform: translateY(-3012px);
+}
+
+/* ---------------------------------------------------------------*/
+
+
+.snap-cont {
+    max-width: 300px;
+    display: block;
+    margin: 0px auto;
+    border: solid black 1px;
+    position: relative;
+}
+
+.snap-img {
+    width: 100%;
+    height: 500px;
+}
+
+.snap-blur {
+    filter: blur(2px);
+}
+
+.snap-caption {
+    background-color: darkslategray;
+    color: white;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    position: absolute;
+    padding: 10px;
+    opacity: 0.75;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10;
+}
+
+.snap-pos-1 {
+    top: 40%;
+}
+
+.snap-pos-2 {
+    top: 20%;
+}
+
+.snap-pos-3 {
+    bottom: 25%;
+}
+
+.snap-pos-4 {
+    top: 25%;
+}
+
+
+.snap-countdown {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
+}
+
+.snap-bereal {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border: thin black solid;
+    border-radius: 10px;
+}
+
+
+/* --------------------------------------------------------------- */
+/* la_temperanza notebook lined paper  https://archiveofourown.org/collections/A_Guide_to_Coding_and_Fanworks/works/4414436  */
+.paper tr:hover, .paper td:hover { background: none; }
+
+.paper {
+  /* width: 97%;
+  height: 100%; */
+  max-width: 600px;
+  min-width: 300px;
+  background: linear-gradient(to bottom,#FFFFFF 24px,#00b0d7 1px);
+  margin: 10px auto;
+  background-size: 100% 25px;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  -moz-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  -ms-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  -o-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+}
+
+.paper::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 10%;
+  height: 100%;
+  width: 1px;
+  background: #db4034;
+}
+
+.paper::after {
+  content: '';
+}
+
+.header-writing {
+  height: 80px;
+  width: 100%;
+  background: #FFFFFF;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+}
+
+.titletext {
+  font-size: 15px;
+  line-height: 15px;
+  padding-left: 0;
+  text-align: center;
+  margin-left: 8%;
+  margin-top: 84px;
+  margin-bottom: 10px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+}
+
+ .textwmar {
+  margin-left: 11%;
+  margin-top: 100px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000000;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+}
+
+.text-handwriting {
+  margin-left: 11%;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000000;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+.polly-img {
+  width: 150px;
+  float: right;
+  transform: rotate(5deg);
+  padding: 10px;
+  margin-top: -10px;
+  filter: drop-shadow(1px 1px 2px black);
+}
+
+.textwmar .tape1 {
+  width: 78px;
+  position: absolute;
+  right: 0px;
+  z-index: 100;
+  transform: rotate(45deg);
+  opacity: 0.8;
+}
+
+.textwmar .tape2 {
+  width: 78px;
+  position: absolute;
+  right: 124px;
+  z-index: 100;
+  transform: rotate(-40deg);
+  opacity: 0.8;
+}
+
+.spiral {
+  position: absolute;
+  left: -30px;
+  height: 100%;
+  z-index: 10;
+  width: 50px;
+}
+
+.frog-doodle {
+  position: absolute;
+  z-index: 10;
+  /* filter: opacity(0.5); */
+  right: 0;
+  width: 150px;
+  opacity: 0.5;
+  top: -4px;
+}
+
+.eraser-doodle {
+  position: absolute;
+  z-index: 10;
+  width: 120px;
+  right: 0px;
+  top: 50px;
+}
+
+.stain-doodle {
+  position: absolute;
+  z-index: 10;
+  width: 150px;
+  opacity: 0.3;
+  right: 0px;
+}
+
+.scribble-doodle {
+  width: 81px;
+  position: absolute;
+  margin-top: 6px;
+}
+
+
+/* ---------------chrome history, made by jihn------------------------- */
+/* https://codepen.io/jihnari/pen/jOaNgNZ */
+
+/*chrome history*/
+div.ch-table p
+{
+  margin-top:0;
+  margin-bottom:0;
+}
+
+.ch-header{
+  font-family: 'Uni sans', 'Whitney', sans-serif;
+  border-bottom: 1px solid #E0E0E0;
+  margin-bottom: 20px;
+  padding: 4px 5px 0px;
+}
+.ch-title{
+  font-size:1.4em;
+  padding-top:5px;
+}
+.ch-search-icon{
+  float:right;
+  cursor: pointer;
+  height:2em;
+  clear:both; /*this clear might not work in ao3*/
+}
+
+.ch-sub-header{
+  color: #1A72E8;
+  font-size: 11px;
+  margin-bottom: 8px;
+  margin-top: 9px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.ch-sub-header p {
+  margin: 0px;
+}
+
+.ch-date{
+  color: #5f6267;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: -8px;
+  padding-bottom: 10px;
+}
+
+.ch-table {
+  display: table;
+  width: 95%;
+  table-layout: fixed;
+  /* position: relative; */
+  /* background: pink; */
+  padding-left: 8px;
+  margin-top: -13px;
+  padding-right: 4px;
+}
+
+.ch-row{
+  display: table-row;
+  /* font-size: 14px; */
+  /* width: 100%; */
+  /* height: 21px; */
+  border: 1px solid gray;
+  /* margin: 0px 0 0px 0px; */
+  /* padding-left: 10px; */
+  /* margin-bottom: -10px; */
+}
+
+.ch-dot-cell{
+  display: table-cell;
+  width:40px;
+  vertical-align: middle;
+}
+.ch-dot{
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #F2F3F5;
+}
+.ch-site-cell{
+  display: table-cell;
+  padding-right:15px;
+}
+.ch-page-name{
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  margin-top: 10px;
+}
+.ch-page-link{
+  font-size: 11px;
+  color: #5f6267;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+.ch-x-cell{
+  width:30px;
+  display:table-cell;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.ch-x{
+  margin:0 10px 0 5px;
+  width:20px;
+}
+
+.ch-hide {
+  display: none;
+}
+
+
+/* delete later */
+.ch-name-wrapper{
+  display:inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.signal-gc-dot {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom:5px;
+  background-color: #bbb;
+}
+.signal-gc-name{
+  font-size:1.1em;
+  margin-top:5px;
+  display: block;
+}
+.signal-gc-subname{
+  font-size:.9em;
+  display:block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.signal-gc-name-line{
+  padding-bottom:5px;
+  box-shadow: 0px 8px 8px -10px #888888;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.clear{
+  clear:both;
+}
+table
+{
+    width: 100%;
+}
+
+.chrome-window {
+  background-color: white;
+  font-family: sans-serif;
+  min-height: 450px;
+  overflow-y: hidden;
+  /* max-width: 600px; */
+  position: relative;
+  /* padding: 10px; */
+  /* border: 1px solid gray; */
+  /* margin: 10px; */
+  
+  /* border-top: 30px solid gray;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; */
+  /* padding-top: 10px; */
+}
+
+.chrome-window-ext {
+  /* width: 100%;
+  position: relative;
+  height: 15px;
+  background-color: gray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; */
+  max-width: 600px;
+  min-width: 250px;
+  position: relative;
+  border-top: 30px solid gray;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+.ch-window-ext-title {
+  font-family: monospace;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  display: block;
+  margin: auto;
+}
+
+.chrome-window-ext .dot-cont {
+  top: -36px;
+  left: 10px;
+  z-index: 10;
+}
+
+.ch-row:has(details[open]) {
+  display: none;
+}
+
+.ch-restore-icon {
+  margin: 0px 10px 0px 5px;
+  /* width:20px; */
+  background: lightgray;
+  border-radius: 30px;
+  padding: 2.5px;
+  height: 15px;
+  width: 15px;
+}
+
+.read-toggle-img {
+  margin: 0px auto;
+}
+
+/* toggle read more */
+.readmore-div:has(details:not([open])) .read-toggle-img.more, 
+.readmore-div:has(details[open]) .read-toggle-img.less {
+  display: block;
+}
+
+.readmore-div:has(details:not([open])) .read-toggle-img.less,
+.readmore-div:has(details[open]) .read-toggle-img.more {
+  display: none;
+}
+
+.chrome-window-ext:has(.readmore-toggle:not([open])) .chrome-window {
+  height: 50%;
+}
+
+.chrome-window-ext:has(.readmore-toggle[open]) .chrome-window {
+  height: auto;
+}
+
+.readmore-div {
+  /* position: absolute; */
+  z-index: 10;
+  /* bottom: 0;
+  left: 50%; */
+  cursor: pointer;
+  position: relative;
+  margin-top: -30px;
+}
+
+/* .readmore-div p {
+  margin: 5px;
+} */
+
+/* .readmore-div summary:after {
+  content: '';
+  bottom: 0px;
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(255,255,255, 0), white);
+} */
+
+/* toggle history items in chrome */
+.ch-row:has(:not([open])) .ch-restore-icon,
+.ch-row:has(details[open]) .ch-x {
+  display: none;
+}
+
+.ch-row:has(:not([open])) .ch-x,
+.ch-row:has(details[open]) .ch-restore-icon {
+  display: inline;
+}
+
+.ch-restore {
+  display: none;
+  margin: 0px;
+}
+
+.chrome-window:has(details:not(.ch-restore)[open]) .ch-restore {
+  display: inline;
+}
+
+.chrome-window:has(.ch-restore[open]) .ch-row {
+  display: table-row !important;
+}
+
+/* history restore in chrome toggle , for each row */
+.ch-restore:not([open]) .ch-hist-clear-open,
+.ch-restore[open] .ch-hist-clear {
+  display: none;
+}
+
+.ch-restore[open] .ch-hist-clear-open,
+.ch-restore:not([open]) .ch-hist-clear {
+  display: inilne;
+}
+/* --------------------------------------------------------------- */
